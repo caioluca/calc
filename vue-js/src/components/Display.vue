@@ -1,9 +1,13 @@
+<script setup>
+  const { result, input } = defineProps(['result', 'input'])
+</script>
+
 <template>
 	<div class="display">
-		<input disabled />
+		<input disabled :value="input" />
 		<div class="result">
-			<img src="../assets/result-equals.svg" alt="result-equals">
-			<span>0</span>
+			<img src="/assets/equals.svg" alt="result-equals">
+			<span>{{ result }}</span>
 		</div>
 	</div>
 </template>
